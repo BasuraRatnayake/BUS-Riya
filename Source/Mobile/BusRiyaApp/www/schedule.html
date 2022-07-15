@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="http://designmodo.github.io/Flat-UI/dist/css/vendor/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="http://designmodo.github.io/Flat-UI/dist/css/flat-ui.css">
+        <!--
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"> -->
+        <title>Bus Riya</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+        <!-- <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1"> -->
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
+
+        <style>
+            /* following three (cascaded) are equivalent to above three meta viewport statements */
+            /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html */
+            /* see http://dev.w3.org/csswg/css-device-adapt/ */
+                @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+                @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+                /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
+        </style>
+
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+
+        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work below -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+
+        <!-- Recommended location for your JavaScript libraries -->
+        <!-- These library references (below) are just examples to give you the general idea... -->
+        <!-- <script src="lib/mc/hammer.js"></script> -->
+        <!-- <script src="lib/ft/fastclick.js"></script> -->
+
+        <!--
+  * cordova.js is a phantom lib for "Cordova HTML5 web app," it does nothing in a "Standard HTML5 web app"
+  * Seeing a "Failed to load resource: net::ERR_FILE_NOT_FOUND" message caused by this "cordova.js" script?
+  * The cordova.js script is required if you convert your "Standard HTML5" project into a "Cordova" project.
+  * You can safely ignore the error or comment out this line if you will not be developing a Cordova app.
+-->
+        <script src="cordova.js" id="xdkJScordova_"></script>
+
+        <script src="js/app.js"></script>
+        <!-- for your event code, see README and file comments for details -->
+        <script src="js/init-app.js"></script>
+        <!-- for your init code, see README and file comments for details -->
+        <script src="xdk/init-dev.js"></script>
+        <!-- normalizes device and document ready events, see file for details -->
+        <script type="application/javascript" src="lib/jquery.min.js"></script>
+        <script type="application/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+        <script type="application/javascript" src="marginal/marginal-position.min.js"></script>
+    </head>
+
+    <body>
+        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+        <div class="upage vertical-col left" id="schedule">
+            <div role="navigation" class="navbar navbar-default full-width-widget widget uib_w_1 d-margins" data-uib="twitter%20bootstrap/navbar" data-ver="1">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-navbar-0"> <span class="icon-bar"></span>  <span class="icon-bar"></span>  <span class="icon-bar"></span> 
+                </button><a class="navbar-brand" href="#">Bus Riya</a> 
+                <div id="bs-navbar-0" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a>
+                        </li>
+                        <li><a href="schedule.html">Schedule</a>
+                        </li>
+                        <li><a href="complaint.html">Complaints</a>
+                        </li>
+                        <li><a href="" onclick="logout()">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="panel panel-default">
+  
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <div class="col-md-4 col-md-offset-4">
+                                <div class="input-group">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+      </span>
+      <input type="text" class="form-control" placeholder="Search for...">
+    </div><!-- /input-group -->
+
+  
+ 
+                            </div>
+                        </div>
+                        <center><h6 style="font-size:13pt;">255 - Kottawa - Piliyandala Bus Schedule</h6></center>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Time</th>
+                                    <th>Halt</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>09:00 am</td>
+                                    <td>Kottawa Bus Stand</td>
+                                </tr>
+                                <tr>
+                                    <td>09:20 am</td>
+                                    <td>Pinhena Junction</td>
+                                </tr>
+                                <tr>
+                                    <td>09:30 am</td>
+                                    <td>Sikurada Pola</td>
+                                </tr>
+                                <tr>
+                                    <td>09:40 am</td>
+                                    <td>Elvitigala MW</td>
+                                </tr>
+                                <tr>
+                                    <td>09:55 am</td>
+                                    <td>Siddamulla</td>
+                                </tr>
+                                <tr>
+                                    <td>10:10 am</td>
+                                    <td>Kudamaduwa</td>
+                                </tr>
+                                <tr>
+                                    <td>10:15 am</td>
+                                    <td>Honnanthara</td>
+                                </tr>
+                                <tr>
+                                    <td>10:20 am</td>
+                                    <td>Mawiththara</td>
+                                </tr>
+                                <tr>
+                                    <td>10:25 am</td>
+                                    <td>Miriswaththa</td>
+                                </tr>
+                                <tr>
+                                    <td>10:35 am</td>
+                                    <td>Piliyandala</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </body>
+
+</html>

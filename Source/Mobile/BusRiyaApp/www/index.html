@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+    <!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="http://designmodo.github.io/Flat-UI/dist/css/vendor/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="http://designmodo.github.io/Flat-UI/dist/css/flat-ui.css">
+        <!--
+        <link rel="stylesheet" type="text/css" href="http://designmodo.github.io/Flat-UI/docs/assets/css/demo.css"> --> 
+        
+        <!--<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"> -->
+        <title>Bus Riya</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+        <!--
+  * The "meta viewport" tag (below) helps your app size appropriately to a device's ideal viewport.
+  * Note that Windows device viewports work better when initialized using the @viewport CSS rule.
+  * For a quick overview of "meta viewport" and @viewport, see this article:
+  *   http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag
+  * To see how it works, try your app on a real device with and without a "meta viewport" tag.
+  * Additional useful references include:
+  *   http://www.quirksmode.org/mobile/viewports.html
+  *   http://www.quirksmode.org/mobile/metaviewport/devices.html
+  *   https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html
+-->
+
+        <!-- <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1"> -->
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
+
+        <style>
+            /* following three (cascaded) are equivalent to above three meta viewport statements */
+            /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html */
+            /* see http://dev.w3.org/csswg/css-device-adapt/ */
+                @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+                @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+                /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
+        </style>
+
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+
+        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work below -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+
+        <!-- Recommended location for your JavaScript libraries -->
+        <!-- These library references (below) are just examples to give you the general idea... -->
+        <!-- <script src="lib/mc/hammer.js"></script> -->
+        <!-- <script src="lib/ft/fastclick.js"></script> -->
+
+        <!--
+  * cordova.js is a phantom lib for "Cordova HTML5 web app," it does nothing in a "Standard HTML5 web app"
+  * Seeing a "Failed to load resource: net::ERR_FILE_NOT_FOUND" message caused by this "cordova.js" script?
+  * The cordova.js script is required if you convert your "Standard HTML5" project into a "Cordova" project.
+  * You can safely ignore the error or comment out this line if you will not be developing a Cordova app.
+-->
+        <script src="cordova.js" id="xdkJScordova_"></script>
+
+        <script src="js/app.js"></script>
+        <!-- for your event code, see README and file comments for details -->
+        <script src="js/init-app.js"></script>
+        <!-- for your init code, see README and file comments for details -->
+        <script src="xdk/init-dev.js"></script>
+        <!-- normalizes device and document ready events, see file for details -->
+        <script type="application/javascript" src="lib/jquery.min.js"></script>
+        <script type="application/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+        <script type="application/javascript" src="marginal/marginal-position.min.js"></script>
+    </head>
+
+    <body>
+        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+        <div class="upage vertical-col left" id="mainpage">
+            <div role="navigation" class="navbar navbar-default full-width-widget widget uib_w_1 d-margins" data-uib="twitter%20bootstrap/navbar" data-ver="1">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-navbar-0"> <span class="icon-bar"></span>  <span class="icon-bar"></span>  <span class="icon-bar"></span> 
+                </button><a class="navbar-brand" href="#">Bus Riya</a> 
+                <div id="bs-navbar-0" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a>
+                        </li>
+                        <li><a href="schedule.html">Schedule</a>
+                        </li>
+                        <li><a href="complaint.html">Complaints</a>
+                        </li>
+                        <li><a href="#" onclick="logout()" >Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="table-thing widget uib_w_2 d-margins" data-uib="twitter%20bootstrap/select" data-ver="1">
+                <label class="narrow-control label-inline">Select Route</label>
+                <select class="wide-control form-control default input-sm" id="route-select">
+                    <option>255 - Kottawa - Mt.lavina</option>
+                    <option>120 - Piliyandala - Pettah</option>
+                    <option>130 - Maharagama - Pettah</option>
+                </select>
+            </div>
+            <div class="tarea widget uib_w_3 d-margins" data-uib="media/text" data-ver="0" name="uib_w_3">
+                <div class="widget-container left-receptacle"></div>
+                <div class="widget-container right-receptacle"></div>
+                <div id="map"></div>
+                <div class="text-container" style="padding-top: 40px;">
+                    <center><pre style="font-size:13pt;">Your bus will be arrived in <strong><span id="duration"></span></strong></pre>
+                    </center>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+        <script>
+            var locations;
+            //get users current location
+            setUserLocation();  
+            function setUserLocation() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                } else { 
+                    x.innerHTML = "Geolocation is not supported by this device.";
+                }
+            }
+            
+            function showPosition(position) {
+                localStorage.setItem("userLat", position.coords.latitude);  
+                localStorage.setItem("userLong", position.coords.longitude);
+            }
+                
+            //get bus current location
+            /*
+            localStorage.setItem("busLat", 6.8038654);  
+            localStorage.setItem("busLong", 79.940159); */
+            
+            function getBusCurrentLoc(){
+            $.ajax({
+              method: "POST",
+              url: "http://192.168.1.3/distribute/view/get_location.php",
+              data: { auth_token: localStorage.getItem('auth_token'),
+                    BusNo: localStorage.getItem('bus_no'),
+                    }
+            }).done(function( msg ) {
+                if(msg.status && msg.response_code == 200){
+                   
+                    localStorage.setItem("busLat",  msg.cur_lat);  
+                    localStorage.setItem("busLong", msg.cur_lon);
+                    
+                }else if(data.response_code == 401){ 
+                    document.getElementById('error-msg').innerHTML = "Error Ocurred";
+                }    
+            }).fail(function( msg ) { 
+                document.getElementById('error-msg').innerHTML = "Error Ocurred.";
+            }); 
+            
+            
+            }
+            //google map initializing    
+            function initMap() {
+                var map = new google.maps.Map(document.getElementById('map'), {
+                  zoom: 14,
+                  center: {lat: parseFloat(localStorage.getItem("userLat")), lng: parseFloat(localStorage.getItem("userLong"))}
+                });
+                
+                var userLat = parseFloat(localStorage.getItem('userLat'));
+                var userLong = parseFloat(localStorage.getItem('userLong'));
+                var busLat = parseFloat(localStorage.getItem('busLat'));
+                var busLong = parseFloat(localStorage.getItem('busLong'));
+                var userLoc = {lat: userLat, lng: userLong};
+                var busLoc = {lat: busLat, lng: busLong};
+                
+                calculateDistances(userLoc, busLoc);
+                setMarkers(map);
+            }
+            
+              // order in which these markers should display on top of each other.
+              locations = [
+                ['User Location', parseFloat(localStorage.getItem("userLat")), parseFloat(localStorage.getItem("userLong")), 4],
+                ['Bus Location', parseFloat(localStorage.getItem("busLat")), parseFloat(localStorage.getItem("busLong")), 5],
+              ];
+            
+            function setMarkers(map) {
+
+                var image = {
+                  url: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+                  // This marker is 20 pixels wide by 32 pixels high.
+                  size: new google.maps.Size(20, 32),
+                  // The origin for this image is (0, 0).
+                  origin: new google.maps.Point(0, 0),
+                  // The anchor for this image is the base of the flagpole at (0, 32).
+                  anchor: new google.maps.Point(0, 32)
+                };
+                var shape = {
+                  coords: [1, 1, 1, 20, 18, 20, 18, 1],
+                  type: 'poly'
+                };
+                for (var i = 0; i < locations.length; i++) {
+                  var location = locations[i];
+                  var marker = new google.maps.Marker({
+                    position: {lat: location[1], lng: location[2]},
+                    map: map,
+                    icon: image,
+                    shape: shape,
+                    title: location[0],
+                    zIndex: location[3]
+                  });
+                }
+              }
+                
+            $(document).ready(function() {    
+            setInterval(function() { 
+                getBusCurrentLoc();
+                initMap();
+            }, 20000);
+            }); 
+                
+            
+            var distanceTime= "";
+            
+            function calculateDistances(start,stop) {
+              var service = new google.maps.DistanceMatrixService;
+              service.getDistanceMatrix(
+                {
+                  origins: [start],
+                  destinations: [stop],
+                  travelMode: google.maps.TravelMode.DRIVING,
+                  unitSystem: google.maps.UnitSystem.METRIC,
+                  avoidHighways: false,
+                  avoidTolls: false
+                }, callback);
+            }
+            function callback(response, status) {
+              if (status != google.maps.DistanceMatrixStatus.OK) {
+                alert('Error was: ' + status);
+              } else {
+                var origins = response.originAddresses;
+                var destinations = response.destinationAddresses;
+            
+            
+                for (var i = 0; i < origins.length; i++) {
+                  var results = response.rows[i].elements;
+                  for (var j = 0; j < results.length; j++) {
+                   
+                    distanceTime += origins[i] + ' to ' + destinations[j]
+                        + ': ' + results[j].distance.text + ' in '
+                        + results[j].duration.text + '<br>';
+                      
+                      document.getElementById('duration').innerHTML = results[j].duration.text;
+                 return distanceTime; 
+                  }
+                }
+              }
+            }
+        </script>
+
+        <!--
+<script type="application/javascript" src="js/map.js"></script>  -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCs4PvnvohOnChGxz9BB5N0ziYYZQwhtXg&amp;callback=initMap">
+        </script>
+    </body>
+
+</html>
